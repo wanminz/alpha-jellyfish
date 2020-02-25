@@ -22,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/dashaday/alpha-jellyfish/issues"
   },
-  "homepage": "https://github.com/dashaday/alpha-jellyfish#readme"
+  "homepage": "https://github.com/dashaday/alpha-jellyfish#readme",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cross-env": "^7.0.0",
+    "debug": "~4.1.1",
+    "express": "~4.17.1",
+    "http-errors": "~1.7.3",
+    "pug": "~2.0.4",
+    "morgan": "~1.9.1",
+    "node-sass-middleware": "0.11.0"
+  }
 }
