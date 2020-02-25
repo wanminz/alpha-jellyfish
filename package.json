@@ -1,0 +1,36 @@
+{
+  "name": "alpha-jellyfish",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Travel itinerary with Flight API",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dstart": "cross-env DEBUG=alpha-jellyfish:* ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashaday/alpha-jellyfish.git"
+  },
+  "keywords": [
+    "flight",
+    "api",
+    "express"
+  ],
+  "author": "Dasha Day Hisoler, Diana Silvas, Wanmin Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dashaday/alpha-jellyfish/issues"
+  },
+  "homepage": "https://github.com/dashaday/alpha-jellyfish#readme",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cross-env": "^7.0.0",
+    "debug": "~4.1.1",
+    "express": "~4.17.1",
+    "http-errors": "~1.7.3",
+    "pug": "~2.0.4",
+    "morgan": "~1.9.1",
+    "node-sass-middleware": "0.11.0"
+  }
+}
