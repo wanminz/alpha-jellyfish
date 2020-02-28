@@ -1,5 +1,22 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+main#content
+h1 Create Trip
+p
+  | Enter your trip information here!
+form#new-trip-form(action='#null' method='get')
+  ol
+    li
+      label(for='trip-name') Trip Name
+      input#trip-name(type='text' name='trip-name' placeholder="What's the name of your trip?")
+    li
+      label(for='location') Location
+      input#location(type='text' name='location' placeholder='Where are you going?')
+    li
+      label(for='trip-start') From:
+      input#trip-start(type='date' name='trip-start' value='' min='2020-01-01' max='2025-12-31')
+    li
+      label(for='trip-end') From:
+      input#trip-end(type='date' name='trip-end' value='' min='2020-01-01' max='2025-12-31')
+    li
+      input#create(type='submit' name='create' value='Create')
+    li
+      input#cancel(type='submit' name='cancel' value='Cancel')
