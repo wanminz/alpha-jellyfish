@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Travel Itinerary' });
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login', { page_name: 'Registration' });
+});
+
 module.exports = router;
