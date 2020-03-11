@@ -1,17 +1,16 @@
 const sqlite = require('sqlite3').verbose();
 
-const db = new sqlite.Database('development.sqlite3', (err) => {
+function connect(database = 'development.sqlite3') {
+  return new sqlite.Database(database,(err) => {
   if (err) {
     console.error(err.message);
   }
   else {
-    console.log('Connected to the database');
+    console.log(`Connected to the database ${database}`);
   }
 });
+}
 
-db.close((err) => {
-  if (err) {
-    console.err(err.message);
-  }
-  console.log('Database connection closed');
-});
+module.exports = {
+  connect
+}
