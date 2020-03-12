@@ -1,22 +1,29 @@
+doctype html
+head
+  title Trip Form
+  // ONLY placeholder. should be changed
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width,initial-scale=1.0,shrink-to-fit=no')
+  link(rel='stylesheet' href='screen.css')
 main#content
-h1 Create Trip
-p
-  | Enter your trip information here!
-form#new-trip-form(action='#null' method='get')
-  ol
-    li
-      label(for='trip-name') Trip Name
-      input#trip-name(type='text' name='trip-name' placeholder="What's the name of your trip?")
-    li
-      label(for='location') Location
-      input#location(type='text' name='location' placeholder='Where are you going?')
-    li
-      label(for='trip-start') From:
-      input#trip-start(type='date' name='trip-start' value='' min='2020-01-01' max='2025-12-31')
-    li
-      label(for='trip-end') From:
-      input#trip-end(type='date' name='trip-end' value='' min='2020-01-01' max='2025-12-31')
-    li
-      input#create(type='submit' name='create' value='Create')
-    li
-      input#cancel(type='submit' name='cancel' value='Cancel')
+  h1#create-trip Create Trip
+  p#information
+    | Enter your trip information here!
+  form#new-trip-form(action='#null' method='get')
+    label(for='trip-name') Trip Name:
+    input#trip-name(type='text' name='trip-name' required='' placeholder="What's the name of your trip?")
+    br
+    label(for='location') Location:
+    input#location(type='text' name='location' required='' placeholder='Where are you going?')
+    br
+    label(for='trip-start') From:
+    input#trip-start(type='date' name='trip-start' value='' min='2020-01-01' max='2025-12-31' required='')
+    br
+    label(for='trip-end') To:
+    input#trip-end(type='date' name='trip-end' value='' min='2020-01-01' max='2025-12-31')
+    br
+    label(for='Transport-mode') Transport mode:
+    input#trip-mode(type='text' name='Transport-mode' value='' placeholder='What Transportation are you using?' required='')
+    br
+    input#create(type='submit' name='create' value='Create')
+    input#cancel(type='submit' name='cancel' value='Cancel')
